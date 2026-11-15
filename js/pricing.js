@@ -2,7 +2,7 @@
 const TICKET_PRICE = 350; // ₪ לכרטיס
 const SERVICE_FEE = 12;   // ₪ עמלת שירות לכל כרטיס
 const MAX_TICKETS = 8;    // מקסימום כרטיסים להזמנה
-const MEMBER_MAX_TICKETS = 4; // מכסה לחברת מועדון במכירה המוקדמת
+const MEMBER_MAX_TICKETS = 6; // מכסה לחברת מועדון במכירה המוקדמת
 const MEMBER_DISCOUNT_PERCENT = 20; // הנחת חברת מועדון, על מחיר הכרטיס בלבד
 const STUDENT_DISCOUNT_PERCENT = 15; // מבצע סטודנטיות, על מחיר הכרטיס בלבד
 
