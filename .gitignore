@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 *.log
+
+# הגדרות מקומיות עם מפתחות אמיתיים – לא נכנסות למאגר (ראו js/config.example.js)
+js/config.js
