@@ -14,6 +14,8 @@ function ticketPrice(isMember) {
 }
 
 function calcTotal(qty, isMember) {
+  // כמות לא חוקית: לא מספר שלם, פחות מ-1 או מעל המכסה של אותה לקוחה
+  if (!Number.isInteger(qty) || qty < 1 || qty > maxTickets(isMember)) return null;
   // עמלת השירות לא מקבלת הנחה
   return qty * (ticketPrice(isMember) + SERVICE_FEE);
 }
