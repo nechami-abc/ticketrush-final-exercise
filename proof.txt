@@ -1,0 +1,96 @@
+### git worktree list
+"D:/\327\222\327\231\327\230/demo/ticketrush"              9b92041 [main]
+"D:/\327\222\327\231\327\230/demo/ticketrush-early-access" 01f4215 [feature/early-access]
+"D:/\327\222\327\231\327\230/demo/ticketrush-hotfix"       d522fc3 [hotfix/price]
+"D:/\327\222\327\231\327\230/demo/ticketrush-review-noa"   3111262 [review/noa-refund]
+"D:/\327\222\327\231\327\230/demo/ticketrush-waitlist"     b101a24 [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                             01f4215 (D:/גיט/demo/ticketrush-early-access) feat: raise club-member quota from 4 to 6 tickets per order
++ feature/waitlist                                 b101a24 (D:/גיט/demo/ticketrush-waitlist) feat: add joinWaitlist for sold-out events
++ hotfix/price                                     d522fc3 (D:/גיט/demo/ticketrush-hotfix) Revert "perf: faster price formatting"
+* main                                             9b92041 [origin/main: ahead 15] Merge branch 'feature/waitlist': join a waitlist when sold out
++ review/noa-refund                                3111262 (D:/גיט/demo/ticketrush-review-noa) docs: code review of noa/refund – not ready to merge
+  remotes/origin/HEAD                              -> origin/main
+  remotes/origin/dana/promo                        d4b1e35 test: add student discount tests
+  remotes/origin/main                              6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/noa/refund                        f7e8785 test: refund tests
+  remotes/origin/rachel-cohen/feature/early-access 23320b1 feat: raise club-member quota from 4 to 6 tickets per order
+  remotes/origin/rachel-cohen/feature/waitlist     b101a24 feat: add joinWaitlist for sold-out events
+  remotes/origin/rachel-cohen/hotfix/price         d522fc3 Revert "perf: faster price formatting"
+  remotes/origin/rachel-cohen/main                 5df0dc1 Merge branch 'feature/waitlist': join a waitlist when sold out
+  remotes/origin/rachel-cohen/result               38cdc09 result rachel-cohen 100/100
+  remotes/origin/rachel-cohen/review/noa-refund    153272c docs: code review of noa/refund – not ready to merge
+  remotes/origin/ruth/fixes                        fee9f58 wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+* 38cdc09 (origin/rachel-cohen/result) result rachel-cohen 100/100
+*   9b92041 (HEAD -> main, tag: v1.1) Merge branch 'feature/waitlist': join a waitlist when sold out
+|\  
+* \   f5b8028 Merge branch 'feature/early-access': club early access + student promo
+|\ \  
+| * | 01f4215 (feature/early-access) feat: raise club-member quota from 4 to 6 tickets per order
+| * |   8d0148d Merge main into feature/early-access: pick up the price display hotfix
+| |\ \  
+| * \ \   c9e68d9 Merge origin/dana/promo: student discount alongside early access
+| |\ \ \  
+* | | | | 7e40ae4 security: stop tracking js/config.js with the payment API key
+| | | | | *   5df0dc1 (origin/rachel-cohen/main) Merge branch 'feature/waitlist': join a waitlist when sold out
+| | | | | |\  
+| | | | | |/  
+| | | | |/|   
+| | | | * | b101a24 (origin/rachel-cohen/feature/waitlist, feature/waitlist) feat: add joinWaitlist for sold-out events
+| | | |/ /  
+| | | | *   2362fc5 Merge branch 'feature/early-access': club early access + student promo
+| | | | |\  
+| | | | | * 23320b1 (origin/rachel-cohen/feature/early-access) feat: raise club-member quota from 4 to 6 tickets per order
+| | | | | *   7f1f495 Merge main into feature/early-access: pick up the price display hotfix
+| | | | | |\  
+| | | | |_|/  
+| | | |/| |   
+| | | | | * feef5a7 Merge origin/dana/promo: student discount alongside early access
+| | |_|_|/| 
+| |/| | |/  
+| | | |/|   
+| | |/| |   
+| | * | | d4b1e35 (origin/dana/promo) test: add student discount tests
+| | * | | 0841085 feat: student discount (15%)
+| * | | | 9b82f56 feat: calcTotal returns null for an invalid quantity
+| * | | | 1e79f1d feat: 20% club-member discount on the ticket price
+| * | | | c92940e feat: limit club members to 4 tickets per order
+| |/ / /  
+| | | * c033751 security: stop tracking js/config.js with the payment API key
+| |_|/  
+|/| |   
+* | | 66a30de fix: correct concert date in events.js
+| |/  
+|/|   
+* |   60c6567 Merge branch 'hotfix/price': restore correct price display
+|\ \  
+| |/  
+|/|   
+| * d522fc3 (origin/rachel-cohen/hotfix/price, hotfix/price) Revert "perf: faster price formatting"
+|/  
+| * 3111262 (review/noa-refund) docs: code review of noa/refund – not ready to merge
+| | * 153272c (origin/rachel-cohen/review/noa-refund) docs: code review of noa/refund – not ready to merge
+| |/  
+| * f7e8785 (origin/noa/refund) test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+| * fee9f58 (origin/ruth/fixes) wip: try new fonts
+| * 72063d7 debug: dump state to console
+| * 20cd6a9 WIP: try removing ticket limits
+| * 8284d98 fix: correct concert date in events.js
+| * 339324e WIP: new checkout flow (do not merge)
+|/  
+* 6e5b25d (origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
