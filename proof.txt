@@ -1,0 +1,67 @@
+### git worktree list
+"D:/Users/User/Downloads/\327\224\327\222\327\223\327\224 \327\234\327\236\327\224\327\230/exam/ticketrush"              311808b [main]
+"D:/Users/User/Downloads/\327\224\327\222\327\223\327\224 \327\234\327\236\327\224\327\230/exam/ticketrush-early-access" fc77e5a [feature/early-access]
+"D:/Users/User/Downloads/\327\224\327\222\327\223\327\224 \327\234\327\236\327\224\327\230/exam/ticketrush-hotfix"       18dd71d [hotfix/price]
+"D:/Users/User/Downloads/\327\224\327\222\327\223\327\224 \327\234\327\236\327\224\327\230/exam/ticketrush-review-noa"   3c9f0b8 [review/noa-refund]
+"D:/Users/User/Downloads/\327\224\327\222\327\223\327\224 \327\234\327\236\327\224\327\230/exam/ticketrush-waitlist"     a7e9aa8 [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access      fc77e5a (D:/Users/User/Downloads/הגדה למהט/exam/ticketrush-early-access) feat: raise club-member quota from 4 to 6 tickets per order
++ feature/waitlist          a7e9aa8 (D:/Users/User/Downloads/הגדה למהט/exam/ticketrush-waitlist) feat: add joinWaitlist for sold-out events
++ hotfix/price              18dd71d (D:/Users/User/Downloads/הגדה למהט/exam/ticketrush-hotfix) Revert "perf: faster price formatting"
+* main                      311808b [origin/main: ahead 15] Merge branch 'feature/waitlist': join a waitlist when sold out
++ review/noa-refund         3c9f0b8 (D:/Users/User/Downloads/הגדה למהט/exam/ticketrush-review-noa) [origin/noa/refund: ahead 1] docs: code review of noa/refund – not ready to merge
+  remotes/origin/HEAD       -> origin/main
+  remotes/origin/dana/promo d4b1e35 test: add student discount tests
+  remotes/origin/main       6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/noa/refund f7e8785 test: refund tests
+  remotes/origin/ruth/fixes fee9f58 wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+*   311808b (HEAD -> main, tag: v1.1) Merge branch 'feature/waitlist': join a waitlist when sold out
+|\  
+| * a7e9aa8 (feature/waitlist) feat: add joinWaitlist for sold-out events
+* |   58d0394 Merge branch 'feature/early-access': club early access + student promo
+|\ \  
+| * | fc77e5a (feature/early-access) feat: raise club-member quota from 4 to 6 tickets per order
+| * | fa10063 Merge main into feature/early-access: pick up the price display hotfix
+| |\| 
+| * |   f296844 Merge origin/dana/promo: student discount alongside early access
+| |\ \  
+| | * | d4b1e35 (origin/dana/promo) test: add student discount tests
+| | * | 0841085 feat: student discount (15%)
+| * | | 00538b4 feat: calcTotal returns null for an invalid quantity
+| * | | 723323b feat: 20% club-member discount on the ticket price
+| * | | 917d638 feat: limit club members to 4 tickets per order
+| |/ /  
+* | | 0d8626c security: stop tracking js/config.js with the payment API key
+* | | 7cdc07b fix: correct concert date in events.js
+| |/  
+|/|   
+* |   a32a330 Merge branch 'hotfix/price': restore correct price display
+|\ \  
+| |/  
+|/|   
+| * 18dd71d (hotfix/price) Revert "perf: faster price formatting"
+|/  
+| * 3c9f0b8 (review/noa-refund) docs: code review of noa/refund – not ready to merge
+| * f7e8785 (origin/noa/refund) test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+| * fee9f58 (origin/ruth/fixes) wip: try new fonts
+| * 72063d7 debug: dump state to console
+| * 20cd6a9 WIP: try removing ticket limits
+| * 8284d98 fix: correct concert date in events.js
+| * 339324e WIP: new checkout flow (do not merge)
+|/  
+* 6e5b25d (origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
