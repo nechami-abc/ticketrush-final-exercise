@@ -7,3 +7,9 @@ test('regular customers may buy up to 8 (explicit false)', function () { assertE
 test('club members may buy up to 4', function () { assertEq(maxTickets(true), 4); });
 test('club member pays 280 per ticket plus the full fee (2 = 584)', function () { assertEq(calcTotal(2, true), 584); });
 test('explicit non-member pays the regular price (2 = 724)', function () { assertEq(calcTotal(2, false), 724); });
+test('zero tickets is invalid', function () { assertEq(calcTotal(0, false), null); });
+test('9 tickets is over the regular limit', function () { assertEq(calcTotal(9, false), null); });
+test('5 tickets is over the member limit', function () { assertEq(calcTotal(5, true), null); });
+test('exactly 4 for a member is allowed', function () { assertEq(calcTotal(4, true), 1168); });
+test('exactly 8 for a regular customer is allowed', function () { assertEq(calcTotal(8), 2896); });
+test('a fractional quantity is invalid', function () { assertEq(calcTotal(1.5), null); });

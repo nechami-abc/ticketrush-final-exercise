@@ -9,7 +9,9 @@ function maxTickets(isMember) {
   return isMember ? MEMBER_MAX_TICKETS : MAX_TICKETS;
 }
 
+// כמות לא חוקית (פחות מ-1, מעל המכסה או לא מספר שלם) מחזירה null
 function calcTotal(qty, isMember) {
+  if (!Number.isInteger(qty) || qty < 1 || qty > maxTickets(isMember)) return null;
   const ticket = isMember ? TICKET_PRICE * (1 - MEMBER_DISCOUNT) : TICKET_PRICE;
   return qty * (ticket + SERVICE_FEE);
 }
